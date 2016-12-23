@@ -1,0 +1,6 @@
+<div apply="main.java.nl.tue.ieis.is.basex.controller.MainViewController" width="100%" height="100%" sclass="mainDiv" >
+	
+	<window id="mainWindow" border="none" height="100%" width="100%">
+		<!--  <include id="includeSwitch" src="/gui/default.zul"/> -->
+	</window>
+</div>

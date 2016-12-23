@@ -1,0 +1,75 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<zk  xmlns:n="native">
+<div id="mainDiv" apply="main.java.nl.tue.ieis.is.basex.controller.BMRadarController" width="100%" height="100%" sclass="mainDiv"
+xmlns:w="http://www.zkoss.org/2005/zk/client">	
+	<borderlayout height="99%" width="99%">
+	    <center autoscroll="true" border="normal" title="Business Model Canvas" style="margin: 0 auto;"  >
+	        <hbox width="100%" height="100%" align="center">
+	        	<div style="margin: 0 auto;">
+					<canvas id="cvs1" style="margin: 0 auto;" width="1000px" height="1000px"/>
+				</div>
+			</hbox>
+	    </center>
+	
+	    <east id="actorPropView" collapsible="true" autoscroll="true" width="340px" title="Actor Properties">
+	    	<div width="338px" >
+		        <groupbox width="336px" sclass="main z-demo-config" id="bmActorGroupbox" title="Actor Name"	>
+		            <vlayout spacing="15px">
+		            	<hlayout valign="middle">
+		            		<checkbox id="isFocalCheckbox" label="Is Focal Actor?" disabled="true"/>
+		            		<space bar="true" spacing="50px" />
+		            		<checkbox id="isCustomerCheckbox" label="Is Customer Actor?" disabled="true"/>
+		            	</hlayout>
+		            	<hlayout valign="middle">
+                            <label value="X"/>
+                            <doublespinner id="xActorSpinner" width="65px"  constraint="no empty,min -1000 max 1000: ${c:l('err.msg.spinner')}" value="0.0"/>
+                            <space bar="true" spacing="10px" />
+                            
+                            <label value="Y"/>
+                            <doublespinner id="yActorSpinner"  width="65px"  constraint="no empty,min -1000 max 1000: ${c:l('err.msg.spinner')}"  value="0.0"/>
+                            <space bar="true" spacing="10px" />
+                            
+                            <label value="Degree"/>
+                            <doublespinner id="degActorSpinner"  width="65px"  constraint="no empty,min -360 max 360: ${c:l('err.msg.spinner')}"  value="0.0"/>
+                       	</hlayout>	
+		                <groupbox mold="3d" width="100%" title="Value Porposition" id="valuePropGroupbox">
+		                    <vlayout spacing="20px">
+		                    	<textbox id="actorValuePropTextbox" width="100%"/>
+		                        <hlayout valign="middle">
+		                            <label value="X"/>
+		                            <doublespinner id="xPropSpinner" width="65px"  constraint="no empty,min 0 max 1000: ${c:l('err.msg.spinner')}" value="0.0"/>
+		                            <space bar="true" spacing="10px" />
+		                            
+		                            <label value="Y"/>
+		                            <doublespinner id="yPropSpinner"  width="65px"  constraint="no empty,min 0 max 1000: ${c:l('err.msg.spinner')}" value="0.0"/>
+		                            <space bar="true" spacing="10px" />
+		                            
+		                            <label value="Degree"/>
+		                            <doublespinner id="degPropSpinner"  width="65px"  constraint="no empty,min -360 max 360: ${c:l('err.msg.spinner')}" value="0.0"/>
+	                        	</hlayout>
+	                       </vlayout>
+		                </groupbox>
+
+		                <groupbox mold="3d" width="100%" id="activityGroupbox">
+		                	<caption label="Activities" width="100%" >
+		                		 <button image="/imgs/add.png" id="addActivityBtn" style="margin-left:210px;"/>
+		                	</caption>
+		                </groupbox>
+		                
+		                 <groupbox mold="3d" width="100%" id="costBenefitGroupbox">
+		                 	<caption label="Costs and Benefits" width="100%" >
+		                		 <button image="/imgs/add.png" id="addCostBenefitBtn" style="margin-left:155px;"/>
+		                	</caption>
+		                </groupbox>
+		                
+		                <hlayout>
+		                	<button label="Save Actor" image="/imgs/save.png" id="saveBmAcotrPropBtn" sclass="myButton" width="150px"/>
+		                	<button label="Remove Actor" image="/imgs/del.png" id="removeBmActor" sclass="myButton" width="160px"/>
+		                </hlayout>
+		            </vlayout>
+		        </groupbox>
+		    </div>
+	    </east>
+	</borderlayout>
+</div>
+</zk>

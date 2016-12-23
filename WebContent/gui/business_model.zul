@@ -1,0 +1,49 @@
+<div width="100%" height="100%" sclass="mainDiv" apply="main.java.nl.tue.ieis.is.basex.controller.BusinessModelController">	
+	<borderlayout height="99%" width="99%">
+		<west width="20%" splittable="true" collapsible="true" autoscroll="true" title="Business Model Lists">
+	   		<borderlayout height="100%" width="100%">
+	   			<center autoscroll="true">
+		   			<vlayout spacing="5px">
+						<hlayout valign="middle" style="margin-top:5px; margin-left:5px;">
+							<button label="Add Business Model" image="/imgs/add.png" id="addBMBtn"  sclass="myButton" width="100%" />
+						</hlayout>
+		   				<grid id="businessModelLists" emptyMessage="No business model has been created.">
+				   			<columns>
+				   				<column align="left" />
+				   			</columns> 
+				   			<rows/>
+				   			</grid>
+		   			</vlayout>
+	   			</center>
+	   			<south title="Business Model Properties" height="65%" collapsible="true" splittable="true" visible="false" id="bmPropertiesSection">
+	   				<borderlayout>
+	   					<south  id="valueInUseSection" height="115px" autoscroll="true" collapsible="true" title="Value-in-Use">
+	   						<vlayout spacing="5px">
+			  					<textbox id="valueInUseTextbox" hflex="1" multiline="true" constraint="no empty" style="margin:3px; margin-bottom:0px;" height="30px"/>
+	   							<hlayout hflex="1" vflex="1">	
+									<button label="Save" image="/imgs/save.png" id="saveBMBtn" sclass="myButton" />
+									<button label="Remove" image="/imgs/del.png" id="removeBMBtn" sclass="myButton" />
+								</hlayout>
+	   						</vlayout>
+	   					</south>
+	   					<center autoscroll="true" id="actorSecttion" title="Actors List">
+		   					<vlayout spacing="5px">
+								<hlayout valign="middle" style="margin-top:5px; margin-left:5px;" id="hlayoutAddActor">
+									<button label="Add Actor" image="/imgs/add.png" id="addActorBtn"  sclass="myButton" width="100%" />
+								</hlayout>
+		   						<grid id="actorLists" emptyMessage="No actor has been added.">
+						   			<columns>
+						   				<column align="left" />
+						   			</columns> 
+						   			<rows/>
+					   			</grid>
+				   			</vlayout>
+	   					</center>
+	   				</borderlayout>
+	   			</south>
+	   		</borderlayout>
+	    </west>
+	    <center id="center_radar" border="normal" title="Business Model Canvas"/>
+	    <south id="shareBMView" open="false" title="User Control Panel" height="200px"></south>
+	</borderlayout>
+</div>

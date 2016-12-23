@@ -1,0 +1,64 @@
+<div sclass="banner"  apply="main.java.nl.tue.ieis.is.basex.controller.BannerController" id="bannerWin">
+	<div sclass="top-banner">
+		<div sclass="headerText" style=" margin-left:15px; margin-top:10px;">
+			<vbox>
+				<label value="BASE/X Framework" sclass="banner-head"/>
+			</vbox>
+		</div>
+		<div sclass="headerLoginArea" style=" margin-right:15px; margin-top:10px;">
+			<hbox>
+				<button 	id="initLoginBtn" 	label="Login" 		image="/imgs/login.png" 	style="width: 100px;"/>
+				<button 	id="initRegBtn" 	label="Register" 	image="/imgs/register.png" style="width: 100px;"/>
+				<button 	id="logoutBtn" 		label="Logout"  	image="/imgs/logout.png" 	style="width: 100px;"	visible="false"   />
+				<div id="userInfo" visible="false" style="margin-top:7px;">
+					<label id="userLabel" style="color:#c0c0c0; font-family:arial; font-size:14px; font-weight:bold;"/>
+				</div>
+			</hbox>
+		</div>
+	</div>
+	
+	<window id="loginWin" title="Login" width="450px" visible="false" closable="true" border="normal" apply="main.java.nl.tue.ieis.is.basex.controller.UserController">
+		<caption image="/imgs/login.png" label="Login Form"/>
+        <grid sclass="loginGrid">
+            <columns>
+                <column hflex="1" />
+                <column hflex="2" />
+            </columns>
+            <rows>
+                <row>Email<textbox id="email" constraint="no empty"/></row>
+                <row>Password <textbox id="password" constraint="no empty" type="password"/></row>
+                <row>
+                	<cell sclass="loginCtl" colspan="2">
+                		<vlayout>
+                    		<button id="loginBtn" label="Login" width="100px" sclass="myButton"/>
+                    		<label id="loginMsgLabel" style="color:red"/>
+                		</vlayout>
+               		</cell>
+              	</row>
+            </rows>
+        </grid>
+    </window>
+
+    <window id="regWin" title="Register" width="450px" style="overflow-y:scroll; padding:10px; margin:10px;" 
+    visible="false" closable="true" border="normal" apply="main.java.nl.tue.ieis.is.basex.controller.UserController">
+        <caption image="/imgs/register.png" label="Registration Form"/>
+        <grid sclass="registerGrid" height="100%">
+            <columns>
+                <column hflex="1" />
+                <column hflex="2" />
+            </columns>
+            <rows>
+                <row>Email*					<textbox id="regEmail" constraint="/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*([,;]\s*\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)*/: Please enter real e-mail address"/></row>
+                <row>Password*				<textbox id="regPassword" type="password" constraint="no empty"/></row>
+                <row>Confirm Password*		<textbox id="regPasswordConfirm" type="password" constraint="no empty"/></row>
+                <row>First Name				<textbox id="regFirstname" /></row>
+                <row>Last Name				<textbox id="regLastname"/></row>
+                <row>Company*				<combobox id="regCompany" autocomplete="true" buttonVisible="true" constraint="no empty"/></row>
+                <row><cell sclass="regButton" colspan="2"><vlayout>
+                    <button id="regBtn" label="Register" width="100px" sclass="myButton"/>
+                    <label id="regMsgLabel" style="color:red" />
+                </vlayout></cell></row>
+            </rows>
+        </grid>
+    </window>
+</div>

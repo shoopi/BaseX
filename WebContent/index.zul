@@ -1,0 +1,28 @@
+<?init class="main.java.nl.tue.ieis.is.basex.config.ProjectConfig"?>
+<?page id="BaseX" title="BASE/X" cacheable="true" automaticTimeout="false"?>
+<?link rel="stylesheet" type="text/css" href="/styleX.css"?>
+<!--  <?link href="/imgs/favicon.ico" rel="shortcut icon" type="image/x-icon" ?> -->
+
+<?link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicons/apple-touch-icon.png"?>
+<?link rel="icon" type="image/png" href="/imgs/favicons/favicon-32x32.png" sizes="32x32"?>
+<?link rel="icon" type="image/png" href="/imgs/favicons/favicon-16x16.png" sizes="16x16"?>
+<?link rel="manifest" href="/imgs/favicons/manifest.json"?>
+<?link rel="mask-icon" href="/imgs/favicons/safari-pinned-tab.svg" color="#5bbad5"?>
+<?meta name="theme-color" content="#ffffff"?>
+
+<zk xmlns:w="client">
+	<borderlayout height="100%" width="100%">
+		<north autoscroll="true">
+			<include src="/gui/banner.zul"/>
+		</north>
+		<west collapsible="true" title="Project Explorer" autoscroll="true" width="320px">
+			<include src="/gui/sidebar.zul"/>
+		</west>
+		<center id="mainContent" autoscroll="true"  hflex="1">
+			<include src="/gui/main.zul"/>
+		</center>
+		<south collapsible="true" >
+			<include src="/gui/footer.zul"/>
+		</south>
+	</borderlayout>
+</zk>

@@ -1,0 +1,52 @@
+<div style="min-heigth=" apply="main.java.nl.tue.ieis.is.basex.controller.SidebarController"
+	xmlns:w="http://www.zkoss.org/2005/zk/client">
+	
+	<borderlayout style="min-height: 600px; max-heigth: 995px;" width="300px">
+		<center title="Strategies List" autoscroll="true">
+			<vlayout>
+				<hlayout spacing="5px" valign="middle" style="margin-top:5px; margin-left:5px;">
+					<button label="Add Strategy" image="/imgs/add.png" id="addStrategyBtn"  sclass="myButton" width="290px" height="30px" disabled="true"/>
+				</hlayout>
+				<grid sclass="sidebar" id="strategyGrid" emptyMessage="No Strategy in the repository" context="selectedProcessModel">
+					<columns>
+						<column/>
+					</columns>
+					<rows/>
+				</grid>
+			</vlayout>
+		</center>
+			
+		
+		<south title="BASE/X Pyramid" height="320px" collapsible="true" visible="false" id="pyramidSection" >
+			<vlayout>
+				<div>
+					<canvas height="150px" id="cvs1" style="cursor: pointer"/>
+				</div>
+		
+				<grid vflex="1" sclass="sidebar" id="pyramidGrid" emptyMessage="" context="selectedPyramid">
+					<columns>
+						<column width="45px"/><column/>
+					</columns>
+					<rows sclass="menuitem_rows" style="cursor: pointer">
+						<row id="s_row"> 
+							<checkbox id="s_checkbox_menu" checked="false" disabled="true"/>
+							<label value="Business Strategy"/>
+						</row>
+						<row id="bm_row"> 
+							<checkbox id="bm_checkbox_menu" checked="true" disabled="true"/>
+							<label value="Business Models"/> 
+						</row>
+						<row id="sc_row"> 
+							<checkbox id="sc_checkbox_menu" checked="false" disabled="true"/>
+							<label value="Service Compositions" /> 
+						</row>
+						<row id="bs_row"> 
+							<checkbox id="bs_checkbox_menu" checked="false" disabled="true"/>
+							<label value="Business Services"/> 
+						</row>
+					</rows>
+				</grid>
+			</vlayout>
+		</south>
+	</borderlayout>
+</div>

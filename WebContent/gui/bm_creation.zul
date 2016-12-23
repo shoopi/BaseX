@@ -1,0 +1,48 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<window title="How to Construct a Business Model" border="normal" style=" margin: 0 auto;"  height="100%" width="100%" apply="main.java.nl.tue.ieis.is.basex.controller.BMCreationController" id="mainWindow">
+	
+	<radiogroup id="focalGroupRadioGroup"/>
+    <radiogroup id="customerGroupRadioGroup" />
+    
+	<borderlayout height="99%" width="99%">
+		<center autoscroll="true" border="normal" title="Business Model Properties">
+			<hlayout spacing="7px" vflex="1" hflex="2">
+				<panel border="normal" title="Value-in-Use" vflex="1" hflex="1">
+					<panelchildren style="padding:5px;">
+						<vlayout spacing="7px">
+							<textbox id="mainVIUTextbox" width="99%" height="99%" constraint="no empty" tabindex="12"/>
+							<hlayout hflex="1" vflex="1">	
+								<spinner id="actorsSpinner" constraint="no empty,min 2 max 8: ${c:l('err.msg.spinner')}" width="100px"/>
+								<button label="Save" image="/imgs/save.png" id="saveBmBtn" sclass="myButton" tabindex="1"/>
+							</hlayout>
+						</vlayout>
+					</panelchildren>
+                  </panel>
+                  <panel border="normal" title="Business Model Description" vflex="1" hflex="1">
+					<panelchildren style="padding:5px;">
+						<hlayout hflex="1" vflex="1">
+							<textbox id="BusinessModelDescTextbox" vflex="1" hflex="1" multiline="true"/>
+						</hlayout>
+					</panelchildren>
+                  </panel>
+			</hlayout>
+		</center>
+		
+		<south id="southActorSection" border="normal" title="Actors Properties" height="80%" splittable="true" collapsible="true" autoscroll="false">
+			<grid height="100%" width="99%" id="actorGrid" emptyMessage="No actor has been added" >
+				<columns>
+					<column width="20%" label="Actor Name*"/>
+					<column width="27%" label="Actor Description"/>
+					<column width="25%" label="Value Proposition*"/>
+					<column width="7%" label="Focal*"/>
+					<column width="7%" label="Customer*"/>
+					<column width="7%" label="Add" />
+					<column width="7%" label="Remove" />
+				</columns>
+				<rows>
+				</rows>
+			</grid>
+		</south>
+	</borderlayout>
+	
+</window>

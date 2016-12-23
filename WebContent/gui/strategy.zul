@@ -1,0 +1,101 @@
+<window border="none" id="strategyWin" height="100%" width="100%" apply="main.java.nl.tue.ieis.is.basex.controller.StrategyController">
+<style src="/sprite.css.dsp" />
+	<borderlayout height="99%" width="99%">
+		<south title="Strategy Properties" vflex="max" collapsible="true" splittable="true" style="text-align: center;" autoscroll="true">
+			<hlayout spacing="7px" vflex="1" hflex="2">
+                  <panel border="none" vflex="1" hflex="1">
+                  	<caption label="Strategy Descriptionssss" style="font-weigth: bolder; color:blue; height:10px; " height="10px"> </caption>
+					<panelchildren style="padding:5px;">
+						<hlayout hflex="1" vflex="1">
+							<textbox id="strategyDescTextbox" vflex="1" hflex="1" multiline="true" tabindex="11"/>
+						</hlayout>
+					</panelchildren>
+                  </panel>
+                  <panel border="none" title="Strategy Name" vflex="1" hflex="1">
+					<panelchildren style="padding:5px;">
+							<vlayout spacing="7px">
+								<textbox id="strategyNameTextbox" width="99%" height="99%" constraint="no empty" tabindex="12"/>
+								<hlayout hflex="1" vflex="1">	
+									<button label="Save" image="/imgs/save.png" id="saveStrategyBtn" sclass="myButton" tabindex="13"/>
+									<button label="Remove" image="/imgs/del.png" id="removeStrategyBtn" sclass="myButton"  disabled="true" tabindex="14"/>
+								</hlayout>
+							</vlayout>
+						</panelchildren>
+                  </panel>
+			</hlayout>
+		</south>
+		<center id="centerSection" style="text-align: center; font-weight: 800;">
+			<borderlayout height="99%" width="99%">
+				<north title="Value-in-Use" height="30%" collapsible="true" splittable="true" autoscroll="true" style="text-align: center;">
+					<hlayout spacing="7px" vflex="1" hflex="3">
+						<panel border="normal" title="Customer" collapsible="true" vflex="1" hflex="1">
+							<panelchildren style="padding:5px;">
+								<textbox width="99%" height="99%" multiline="true" id="customerTextbox" tabindex="1"/>
+							</panelchildren>
+		                  </panel>
+		                  <panel border="normal" title="Experience" collapsible="true" vflex="1" hflex="1">
+							<panelchildren style="padding:5px;">
+								<textbox width="99%" height="99%" multiline="true" id="experienceTextbox" tabindex="2"/>
+							</panelchildren>
+		                  </panel>
+		                  <panel border="normal" title="Interactions" collapsible="true" vflex="1" hflex="1">
+							<panelchildren style="padding:5px;">
+								<textbox width="99%" height="99%" multiline="true" id="interactionsTextbox" tabindex="3"/>
+							</panelchildren>
+		                  </panel>
+					</hlayout>
+				</north>
+				<center title="Service Eco-System" autoscroll="true" style="text-align: center;"> 
+					<hlayout spacing="7px" vflex="1" hflex="3">
+						
+						<vlayout spacing="7px" vflex="2" hflex="1">
+		                  	<panel border="normal" title="Core Services" collapsible="true" vflex="1" hflex="1">
+								<panelchildren style="padding:5px;">
+									<textbox width="99%" height="99%" multiline="true" id="coreServicesTextbox" tabindex="4"/>
+								</panelchildren>
+		                  	</panel>
+			                  <panel border="normal" title="Core Partners" collapsible="true" vflex="1" hflex="1">
+									<panelchildren style="padding:5px;">
+										<textbox width="99%" height="99%" multiline="true" id="corePartnersTextbox" tabindex="5"/>
+									</panelchildren>
+		                  		</panel>
+		                 </vlayout>
+						
+						<panel border="normal" title="Focal Organization" collapsible="true" vflex="1" hflex="1">
+							<panelchildren style="padding:5px;">
+								<textbox width="99%" height="99%" multiline="true" id="focalOrganizationTextbox" tabindex="6"/>
+							</panelchildren>
+		                  </panel>
+		                  
+		                  <vlayout spacing="7px" vflex="2" hflex="1">
+		                  	<panel border="normal" title="Enriching Services" collapsible="true" vflex="1" hflex="1">
+								<panelchildren style="padding:5px;">
+									<textbox width="99%" height="99%" multiline="true" id="enrichingServicesTextbox" tabindex="7"/>
+								</panelchildren>
+		                  	</panel>
+			                  <panel border="normal" title="Enriching Partners" collapsible="true" vflex="1" hflex="1">
+									<panelchildren style="padding:5px;">
+										<textbox width="99%" height="99%" multiline="true" id="enrichingPartnersTextbox" tabindex="8"/>
+									</panelchildren>
+		                  		</panel>
+		                 </vlayout>
+					</hlayout>
+				</center>
+				<south title="Collaboration Management" height="25%" collapsible="true" splittable="true" autoscroll="true" style="text-align: center;">
+					<hlayout spacing="7px" vflex="1" hflex="2">
+						<panel border="normal" title="Core Relationships" collapsible="true" vflex="1" hflex="1">
+							<panelchildren style="padding:5px;">
+								<textbox width="99%" height="99%" multiline="true" id="coreRelationshipsTextbox" tabindex="9"/>
+							</panelchildren>
+		                  </panel>
+		                  <panel border="normal" title="Enriching Relationships" collapsible="true" vflex="1" hflex="1">
+							<panelchildren style="padding:5px;">
+								<textbox width="99%" height="99%" multiline="true" id="enrichingRelationshipsTextbox" tabindex="10"/>
+							</panelchildren>
+		                  </panel>
+					</hlayout>
+				</south>
+			</borderlayout>	
+		</center>
+	</borderlayout>
+</window>
